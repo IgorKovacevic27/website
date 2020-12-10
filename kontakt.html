@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel="shortcut icon" type="image/jpg" href="Images/logo.jpg" />
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"
+        integrity="sha384-FzT3vTVGXqf7wRfy8k4BiyzvbNfeYjK+frTVqZeNDFl8woCbF0CYG6g2fMEFFo/i"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="JS/kontakt.js"></script>    
+
+    <script>
+        $(document).ready(function () {
+            $("#menuOpener").click(function () {
+                if ($(".navbar-menu").hasClass("active")) {
+                    $(".navbar-menu").removeClass("active");
+                } else {
+                    $(".navbar-menu").addClass("active");
+                }
+            });
+        });
+    </script>
+
+<title>Athletic's GYM</title>
+</head>
+
+<body class="index" style="background-image: url('https://images.wallpaperscraft.com/image/hexagons_patterns_texture_127007_2560x1440.jpg');
+ background-attachment: fixed; background-repeat: no-repeat;">
+    <div class="page-content-wrapper">
+        <div class="navbar" id="index-nav">
+            <div style="padding-left: 0px;" id="logo-navbar">
+                <a href="index.html"><img src="Images/logo.jpg" width="130" height="90"></a>
+            </div>
+            <div>
+                <ul id="list-navbar">
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="galerija.html">Galerija</a></li>
+                    <li><a href="lokacije.html">Lokacije</a></li>
+                    <li><a class="active" href="kontakt.html">Kontakt</a></li>
+                    <span id="menuOpener"><i class="fa fa-bars"></i></span>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="mobile-nav">
+            <nav class="navbar-menu">
+                <ul class="menu-listing">
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="galerija.html">Galerija</a></li>
+                    <li><a href="lokacije.html">Lokacije</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+         </div>
+
+        <div id="telo">
+            <div class="kontakt">
+                <p style="color: white; padding-top:8%; font-weight: bold;">Zakažite probni trening:</p>
+                <form action="kontakt.html"  name="myForm" onsubmit="return(validate());">
+
+                    <div style="color: white;" class="label">
+                        <label style="color: white;">Ime:</label>
+                    </div>
+                    <div>
+                        <input class="polja" name="ime" type="text"  />
+                    </div>
+
+                    <div class="label">
+                        <label style="color: white;">Prezime:</label>
+                    </div>
+                    <div>
+                        <input class="polja" name="prezime" type="text" />
+                    </div>
+
+                    <div class="label" id="mejl">
+                        <label style="color: white;">E-mail:</label>
+                    </div>
+                    <div>
+                        <input class="polja" id="mejl1" name="email" type="text" />
+                    </div>
+
+                    <div class="label" id="brTel">
+                        <label id="telLabela" style="color: white;">Broj telefona: </label>
+                    </div>
+                    <div>
+                        <input class="polja" id="tel" name="telefon" type="text"
+                            onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;" />
+                    </div>
+
+                    <div class="label">
+                        <label style="color: white;">Lokacija:</label>
+                    </div>
+                    <div>
+                    <select class="form-control" id="sel1">
+                            <option selected style="color: black;">Vidikovac</option>
+                            <option style="color: black;">Banovo Brdo</option>
+                            <option style="color: black;">Voždovac</option>
+                            <option style="color: black;">Crveni Krst</option>
+                    </select>
+                    </div>
+                    <div class="label" id="dodatniZahtevi">
+                        <label style="color: white;">Dodatni zahtevi: </label>
+                    </div>
+                    <div class="textarea">
+                        <textarea  style="resize: none;" class="polja" rows="5" placeholder="Unesite zahteve"></textarea>
+                    </div>
+                    <div class="dugmici">
+                        <div class="submit">
+                            <input style="border: 2px solid; border-radius: 5px; border-color: black; width: 100%; padding: 6px 12px; margin: 4px 2px; background-color: white;color: black; font-weight: bold;" type="submit" value="Zakaži" />
+                        </div>
+
+                        <div class="reset">                          
+                            <input style="border: 2px solid; border-radius: 5px; border-color: black; width: 100%; padding: 6px 12px; margin: 4px 2px; background-color: white;color: black; font-weight: bold;" type="reset" value="Reset">                            
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        
+        <div class="footer">
+             <div class="telo">
+                <div>
+                    <p>Imate pitanje? Kontaktirajte nas na:
+                        <a href="mailto:info@gym.rs">info@gym.rs</a>
+                    </p>
+                      
+                    <p>
+                        Social media:
+                    </p>  
+                    <div>
+                        <a href="https://www.facebook.com/athleticsgymfitness" target="_blank" rel="noreferrer noopener"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/athletics_gym/" target="_blank" rel="noreferrer noopener"><i class="fab fa-instagram"></i></a> 
+                        <a href="https://twitter.com/Athletics_Gym" target="_blank" rel="noreferrer noopener"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/channel/UCy7pl9uX2YsnCnbQm699BVg" target="_blank" rel="noreferrer noopener"><i class="fab fa-youtube"></i></i></a>
+                    </div>  
+                </div> 
+             </div>
+         </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel="shortcut icon" type="image/jpg" href="Images/logo.jpg" />
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <script src="JS/galerija.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#menuOpener").click(function () {
+                if ($(".navbar-menu").hasClass("active")) {
+                    $(".navbar-menu").removeClass("active");
+                } else {
+                    $(".navbar-menu").addClass("active");
+                }
+            });
+        });
+    </script>
+
+<title>Athletic's GYM</title>
+</head>
+<body class="index">
+    <div class="page-content-wrapper">
+        <div class="navbar" id="index-nav">
+            <div style="padding-left: 0px;" id="logo-navbar">
+                <a href="index.html"><img src="Images/logo.jpg" width="130" height="90"></a>
+            </div>
+            <div>
+                <ul id="list-navbar">
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a class="active" href="galerija.html">Galerija</a></li>
+                    <li><a href="lokacije.html">Lokacije</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <span id="menuOpener"><i class="fa fa-bars"></i></span>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="mobile-nav">
+            <nav class="navbar-menu">
+                <ul class="menu-listing">
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="galerija.html">Galerija</a></li>
+                    <li><a href="lokacije.html">Lokacije</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+         </div>
+
+         
+         <div class="container">
+            <div id="galerija">
+                <div class="slajd">
+                    <img src="Images/1.jpg" style="width:100%">
+                    <div class="caption">Athletic's GYM Banovo Brdo <br> (1 / 5)</div>
+                </div>
+
+                <div class="slajd">
+                    <img src="Images/2.jpg" style="width:100%">
+                    <div class="caption">Athletic's GYM Voždovac <br> (2 / 5)</div>
+                </div>
+
+                <div class="slajd">
+                    <img src="Images/3.jpg" style="width:100%">
+                    <div class="caption">Teretana <br> (3 / 5)</div>
+                </div>
+
+                <div class="slajd">
+                    <img src="Images/4.jpg" style="width:100%">
+                    <div class="caption">Teretana <br> (4 / 5)</div>
+                </div>
+                
+                <div class="slajd">
+                    <img src="Images/5.jpg" style="width:100%">
+                    <div class="caption">Teretana <br> (5 / 5)</div>
+                </div>
+
+                <!--prosla/sledeca slika dugmad-->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+               
+                
+            </div>
+        </div>
+</body>
+</html>

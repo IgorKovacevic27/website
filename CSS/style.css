@@ -1,0 +1,521 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+body{
+    min-width: 100%;
+    height: 100%;
+    margin: 0;
+    background-image: url("../Images/pocetna.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #d6d5d5;
+    background-attachment: fixed;
+    overflow: auto;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+::-webkit-scrollbar-track {
+    background: whitesmoke;
+  }
+  
+::-webkit-scrollbar-thumb {
+    background: rgb(114, 114, 114);
+  }
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+.welcome-section {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.welcome-section .content-wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.welcome-section .content-wrap .fly-in-text {
+    list-style: none;
+}
+
+.welcome-section .content-wrap .fly-in-text li {
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 5em;
+    color: #fff;
+    opacity: 1;
+    transition: all 2s ease;
+}
+
+.welcome-section .content-wrap .fly-in-text li:last-child {
+    margin-right: 0;
+}
+
+.welcome-section .content-wrap .enter-button {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgba(131, 248, 115, 0.8);
+    opacity: 1;
+    transition: all 1s ease 2s;
+}
+
+.welcome-section.content-hidden .content-wrap .fly-in-text li { opacity: 0; }
+.welcome-section.content-hidden .content-wrap .fly-in-text li:nth-child(1) { transform: translate3d(-100px, 0, 0); }
+.welcome-section.content-hidden .content-wrap .fly-in-text li:nth-child(2) { transform: translate3d(100px, 0, 0); }
+.welcome-section.content-hidden .content-wrap .enter-button { opacity: 0; transform: translate3d(0, -30px, 0); }
+
+@media (min-width: 800px) {
+    .welcome-section .content-wrap .fly-in-text li { font-size: 10em; }
+    .welcome-section .content-wrap .enter-button { font-size: 1.5em; }
+}
+
+@media (max-width: 750px){
+    .welcome-section{
+        display: none;
+    }
+}
+
+@media (max-height: 520px){
+    .welcome-section{
+        display: none;
+    }
+}
+
+p{
+    font-weight: 100;
+    text-align: justify;
+    line-height: 20px;
+}
+
+.O-nama{
+    padding: 25px;
+    margin: 9.5% auto 17% auto;
+    width: 300px;
+    text-align: left;
+    background-color: rgba(158, 155, 155, 0.75);
+    border: 3px rgba(145, 143, 143, 0.5) solid;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 750px) and (max-height: 480px){
+    .O-nama{
+        display: none;
+    }
+}
+
+.info > h2{
+    text-align: center;
+    text-decoration-line: underline;
+}
+
+.info{
+    text-align: left;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.navbar {
+    min-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    top: 0;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    z-index: 2;
+    background-color:#292929;
+    min-height:10%;
+}
+
+#index-nav {
+    position: absolute;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.0);
+}
+
+#list-navbar {
+    padding-top:20px;
+    text-align: center;
+ }
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #292929;
+  }
+
+.navbar li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 13px 15px;
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    background-color: #0c0b0b;
+}
+
+.active {
+    background-color: rgba(131, 248, 115, 0.8);
+}
+
+.mobile-nav {
+    position: relative;
+}
+
+.navbar-menu.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateX(0);
+    transition: 0.5s;
+}
+
+.index .navbar-menu {
+    top: 90px;
+    z-index: 22;
+}
+
+.navbar-menu {
+    background-color: #f1eeee;
+    position: fixed;
+    display: none;
+    left: 0;
+    top: 0;
+    max-width: 100%;
+    height: 100px;
+    transition: 0.5s;
+}
+
+.navbar-menu .menu-listing {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+    padding: 0;
+}
+
+.menu-listing li {
+    display: flex;
+}
+
+.menu-listing li a {
+    background-color: #f1eeee;
+    color: #161616;
+    width: 100%;
+    display: block;
+    font-size: 1rem;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.menu-listing li a:hover { 
+    background-color: rgba(131, 248, 115, 0.8);
+    font-weight: bold;
+    color: white;
+    transition: 0.5s; 
+} 
+
+#menuOpener {
+    display: none;
+}
+
+.index #menuOpener i {
+    color: white;
+}
+
+@media (max-width: 1024px) {
+    #menuOpener {
+        display: block;
+    }
+
+    #list-navbar li {
+        display: none;
+    }
+
+    .navbar{
+        position: sticky;
+        top:0;
+    }
+}
+
+@media (min-width: 1024px){
+    .mobile-nav{
+        position: fixed;
+        display: none;
+    }
+}
+
+
+
+.footer {
+    background-color:#292929;
+    position: fixed;
+    margin-bottom: 0px;
+    bottom: 0;
+    width: 100%;
+    height:auto;
+}
+
+.footer p {
+    text-align: center;
+    color: white;
+    font-size: 15px;
+}
+
+.footer .telo > div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding-top: 0px;
+}
+
+.footer i{
+    font-size: 40px;
+    padding-right: 15px;
+    color: white;
+}
+
+.footer i:hover{
+    color: #ffffff;
+}
+
+#galerija {
+    width:100%;
+    box-sizing:border-box;
+    height: 100vh;
+    position: fixed;
+    margin: auto;
+    z-index: 1;
+}
+
+.slajd {
+    display: none;
+    height: 100vh;
+}  
+
+.slajd img {
+
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+}
+
+.slajd:first-child {
+    display: block;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    top: 50%;
+    color: white;
+    font-weight: bold;
+    font-size: 26px;
+    transition: 0.5s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(131, 248, 115, 0.8);
+}
+
+.caption {
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+    font-size: 18px;
+    padding: 9px 11px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(175, 174, 174, 0.5);
+    border: 2px rgba(3, 3, 3, 0.5) solid;  
+}
+
+#map {
+    position:fixed;
+    margin-top: 5.3%;
+    padding-top: 16.5%;
+    height: 435px;
+    width: 100%;
+}
+
+.kontakt{
+    display: flex;
+    flex-direction: column;
+    padding: 5% 10% 20%;
+    align-items: center;
+    border: 1px;
+    font-weight: bold;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+.polja{
+    background-color: whitesmoke;
+    width: 120%;
+    font-weight: bold;
+    color: black;
+}
+
+.form-control{
+    width: 70%;
+    font-weight: bold;
+    color: black;
+    background-color: whitesmoke;
+}
+
+
+.dugmici{
+    display: flex;
+    flex-direction: row;
+}
+
+.submit{  
+    padding-right: 50px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.reset{
+  padding-top: 10px;
+  padding-right: 0px;
+}
+
+.label{
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+@media screen and (max-width: 600px){
+    
+    .kontakt{
+        display: flex;
+        flex-direction: column;
+        padding: 8% 16% 10%;
+        align-items: center;
+        border: 1px;
+        font-weight: bold;
+        margin-bottom: 19%;
+        margin-top: 10%;
+    }
+    
+    .polja{
+        background-color: whitesmoke;
+        width: 90%;
+        font-weight: bold;
+        color: black;
+    }
+    
+    .form-control{
+        width: 50%;
+        font-weight: bold;
+        color: black;
+        background-color: whitesmoke;
+    }
+    
+    .textarea{
+        display: none;
+    }
+
+    #brTel{
+        display: none;
+    }
+
+    #tel{
+        display: none;
+    }
+
+    #dodatniZahtevi{
+        display: none;
+    }
+
+}
+
+@media screen and (max-height: 500px){
+    
+    .kontakt{
+        display: flex;
+        flex-direction: column;
+        padding: 8% 16% 10%;
+        align-items: center;
+        border: 1px;
+        font-weight: bold;
+        margin-bottom: 19%;
+        margin-top: 10%;
+    }
+    
+    .polja{
+        background-color: whitesmoke;
+        width: 90%;
+        font-weight: bold;
+        color: black;
+    }
+    
+    .form-control{
+        width: 50%;
+        font-weight: bold;
+        color: black;
+        background-color: whitesmoke;
+    }
+    
+    .textarea{
+        display: none;
+    }
+
+    #brTel{
+        display: none;
+    }
+
+    #tel{
+        display: none;
+    }
+
+    #dodatniZahtevi{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
